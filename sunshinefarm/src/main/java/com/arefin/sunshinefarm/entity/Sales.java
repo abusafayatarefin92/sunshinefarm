@@ -17,8 +17,8 @@ public class Sales {
     @Column(name = "product_code")
     private String productCode;
 
-    @Column(name = "sales_price")
-    private Double salesPrice;
+    @Column(name = "per_unit_sales_price")
+    private Double perUnitSalesPrice;
 
     @Column(name = "sales_date")
     private Date salesDate;
@@ -51,14 +51,6 @@ public class Sales {
         this.productCode = productCode;
     }
 
-    public Double getSalesPrice() {
-        return salesPrice;
-    }
-
-    public void setSalesPrice(Double salesPrice) {
-        this.salesPrice = salesPrice;
-    }
-
     public Date getSalesDate() {
         return salesDate;
     }
@@ -73,5 +65,13 @@ public class Sales {
 
     public void setCrops(Crops crops) {
         this.crops = crops;
+    }
+
+    public Double getPerUnitSalesPrice() {
+        return perUnitSalesPrice;
+    }
+
+    public void setPerUnitSalesPrice(Double perUnitSalesPrice) {
+        this.perUnitSalesPrice = perUnitSalesPrice;
     }
 }

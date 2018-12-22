@@ -16,9 +16,11 @@ public class Pesticides {
     @Column(name = "product_code", unique = true)
     private String productCode;
 
+    @Column(name = "quantity")
+    private int quantity;
 
-    @Column(name = "price_range")
-    private String priceRange;
+    @Column(name = "purchase_price")
+    private Double purchasePrice;
 
     public Long getId() {
         return id;
@@ -44,11 +46,19 @@ public class Pesticides {
         this.productCode = productCode;
     }
 
-    public String getPriceRange() {
-        return priceRange;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setPriceRange(String priceRange) {
-        this.priceRange = priceRange;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public Double getPurchasePrice() {
+        return purchasePrice;
+    }
+
+    public void setPurchasePrice(Double purchasePrice) {
+        this.purchasePrice = purchasePrice;
     }
 }

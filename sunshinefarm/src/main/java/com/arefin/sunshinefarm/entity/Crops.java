@@ -10,14 +10,20 @@ public class Crops {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name", unique = true)
+    @Column(name = "name")
     private String name;
 
     @Column(name = "duration")
     private String duration;
 
-    @Column(name = "product_code", unique = true)
+    @Column(name = "product_code")
     private String productCode;
+
+    @Column(name = "quantity")
+    private int quantity;
+
+    @Column(name = "per_unit_selling_price")
+    private Double perUnitSellingPrice;
 
     @ManyToMany
     @JoinTable(
@@ -94,5 +100,21 @@ public class Crops {
 
     public void setPesticides(Set<Pesticides> pesticides) {
         this.pesticides = pesticides;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public Double getPerUnitSellingPrice() {
+        return perUnitSellingPrice;
+    }
+
+    public void setPerUnitSellingPrice(Double perUnitSellingPrice) {
+        this.perUnitSellingPrice = perUnitSellingPrice;
     }
 }

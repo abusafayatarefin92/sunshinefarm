@@ -26,8 +26,8 @@ public class Employees {
     private Date startingDate;
 
     @ManyToOne
-    @JoinColumn(name = "role_id", nullable = false)
-    private Role role;
+    @JoinColumn(name = "designation_id", nullable = false)
+    private Designation designation;
 
     public String getName() {
         return name;
@@ -77,11 +77,11 @@ public class Employees {
         this.lastName = lastName;
     }
 
-    public Role getRole() {
-        return role;
+    public Designation getDesignation() {
+        return designation;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setDesignation(Designation designation) {
+        this.designation = designation;
     }
 }
