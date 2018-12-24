@@ -10,32 +10,24 @@ public class Employees {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name", unique = true)
-    private String name;
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "last_name")
+    private String lastName;
 
     @Column(name = "mobile", unique = true)
     private String mobile;
 
-    @Column(name = "first_name", unique = true)
-    private String firstName;
-
-    @Column(name = "last_name", unique = true)
-    private String lastName;
-
-    @Column(name = "starting_date", unique = true)
+    @Column(name = "starting_date")
     private Date startingDate;
+
+    @Column(name = "monthly_salary")
+    private Double monthlySalary;
 
     @ManyToOne
     @JoinColumn(name = "designation_id", nullable = false)
     private Designation designation;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public Date getStartingDate() {
         return startingDate;
@@ -83,5 +75,13 @@ public class Employees {
 
     public void setDesignation(Designation designation) {
         this.designation = designation;
+    }
+
+    public Double getMonthlySalary() {
+        return monthlySalary;
+    }
+
+    public void setMonthlySalary(Double monthlySalary) {
+        this.monthlySalary = monthlySalary;
     }
 }
