@@ -2,6 +2,7 @@ package com.arefin.sunshinefarm.entity;
 
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "pesticides")
@@ -10,10 +11,10 @@ public class Pesticides {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name", unique = true)
+    @Column(name = "name")
     private String name;
 
-    @Column(name = "product_code", unique = true)
+    @Column(name = "product_code")
     private String productCode;
 
     @Column(name = "quantity")
@@ -21,6 +22,21 @@ public class Pesticides {
 
     @Column(name = "purchase_price")
     private Double purchasePrice;
+
+    @ManyToMany
+    @JoinTable(
+            name = "pesticides_crops",
+            joinColumns = @JoinColumn(name = "pesticides_id"),
+            inverseJoinColumns = @JoinColumn(name = "crops_id"))
+    private Set<Crops> crops;
+
+    public Set<Crops> getCrops() {
+        return crops;
+    }
+
+    public void setCrops(Set<Crops> crops) {
+        this.crops = crops;
+    }
 
     public Long getId() {
         return id;

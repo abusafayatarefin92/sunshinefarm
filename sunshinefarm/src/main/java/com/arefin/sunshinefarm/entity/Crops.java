@@ -25,27 +25,6 @@ public class Crops {
     @Column(name = "per_unit_selling_price")
     private Double perUnitSellingPrice;
 
-    @ManyToMany
-    @JoinTable(
-            name = "crops_equipment",
-            joinColumns = @JoinColumn(name = "crops_id"),
-            inverseJoinColumns = @JoinColumn(name = "equipment_id"))
-    private Set<Equipment> equipment;
-
-    @ManyToMany
-    @JoinTable(
-            name = "crops_insecticides",
-            joinColumns = @JoinColumn(name = "crops_id"),
-            inverseJoinColumns = @JoinColumn(name = "insecticides_id"))
-    private Set<Insecticides> insecticides;
-
-    @ManyToMany
-    @JoinTable(
-            name = "crops_pesticides",
-            joinColumns = @JoinColumn(name = "crops_id"),
-            inverseJoinColumns = @JoinColumn(name = "pesticides_id"))
-    private Set<Pesticides> pesticides;
-
     public Long getId() {
         return id;
     }
@@ -76,30 +55,6 @@ public class Crops {
 
     public void setProductCode(String productCode) {
         this.productCode = productCode;
-    }
-
-    public Set<Equipment> getEquipment() {
-        return equipment;
-    }
-
-    public void setEquipment(Set<Equipment> equipment) {
-        this.equipment = equipment;
-    }
-
-    public Set<Insecticides> getInsecticides() {
-        return insecticides;
-    }
-
-    public void setInsecticides(Set<Insecticides> insecticides) {
-        this.insecticides = insecticides;
-    }
-
-    public Set<Pesticides> getPesticides() {
-        return pesticides;
-    }
-
-    public void setPesticides(Set<Pesticides> pesticides) {
-        this.pesticides = pesticides;
     }
 
     public int getQuantity() {

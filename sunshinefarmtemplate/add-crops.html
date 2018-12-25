@@ -72,9 +72,9 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Designation</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-th"></i><a href="add-degignation.html">Add Designation</a></li>
-                            <li><i class="menu-icon fa fa-th"></i><a href="edit-degignation.html">Edit Designation</a></li>
-							<li><i class="menu-icon fa fa-th"></i><a href="degignation-list.html">Designation List</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="add-designation.html">Add Designation</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="edit-designation.html">Edit Designation</a></li>
+							<li><i class="menu-icon fa fa-th"></i><a href="designation-list.html">Designation List</a></li>
                         </ul>
                     </li>
 
@@ -230,16 +230,16 @@
                 </div>
 				<div class="col-sm-7">
 				<div class="col-sm-3">
-					<h5><a href="#">Sample</a></h>
+					<h5><a href="index.html">Home</a></h5>
 					</div>
 					<div class="col-sm-3">
-					<h5><a href="#">Sample</a></h>
+					<h5><a href="#">Sample</a></h5>
 					</div>
 					<div class="col-sm-3">
-					<h5><a href="#">Sample</a></h>
+					<h5><a href="#">Sample</a></h5>
 					</div>
 					<div class="col-sm-3">
-					<h5><a href="#">Sample</a></h>
+					<h5><a href="#">Sample</a></h5>
 					</div>
 				</div>
                 <div class="col-sm-2">
@@ -271,16 +271,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>Dashboard</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <ol class="breadcrumb text-right">
-                            <li class="active">Dashboard</li>
-                        </ol>
+                        <h1>Crops</h1>
                     </div>
                 </div>
             </div>
@@ -289,12 +280,55 @@
         <!--Form goes here -->
 		
 		
+		<div class="card">
+			<div class="card-header">
+				Add <strong>Crops</strong>
+			</div>
+			<div class="card-body card-block">
+				<form action="" method="post" class="form-horizontal">
+					<div class="row form-group">
+						<div class="col col-md-3"><label class=" form-control-label">ID</label></div>
+						<div class="col-12 col-md-9"><input type="text" name="id" placeholder="Enter crop ID" class="form-control"></div>
+					</div>
+					<div class="row form-group">
+						<div class="col col-md-3"><label class=" form-control-label">Name</label></div>
+						<div class="col-12 col-md-9"><input type="text" name="name" placeholder="Enter crop name" class="form-control"></div>
+					</div>
+					<div class="row form-group">
+						<div class="col col-md-3"><label class=" form-control-label">Duration</label></div>
+						<div class="col-12 col-md-9"><input type="text" name="duration" placeholder="Enter duration time" class="form-control"></div>
+					</div>
+					<div class="row form-group">
+						<div class="col col-md-3"><label class=" form-control-label">Product Code</label></div>
+						<div class="col-12 col-md-9"><input type="text" name="productCode" placeholder="Enter Product Code" class="form-control"></div>
+					</div>
+					<div class="row form-group">
+						<div class="col col-md-3"><label class=" form-control-label">Quantity</label></div>
+						<div class="col-12 col-md-9"><input type="text" name="quantity" placeholder="Enter Quantity" class="form-control"></div>
+					</div>
+					<div class="row form-group">
+						<div class="col col-md-3"><label class=" form-control-label">Per Unit Selling Price</label></div>
+						<div class="col-12 col-md-9"><input type="text" name="perUnitSellingPrice" placeholder="Enter Per Unit Selling Price" class="form-control"></div>
+					</div>
+					
+				</form>
+			</div>
+			<div class="card-footer">
+				<button type="submit" class="btn btn-primary btn-sm">
+					<i class="fa fa-dot-circle-o"></i> Submit
+				</button>
+				<button type="reset" class="btn btn-danger btn-sm">
+					<i class="fa fa-ban"></i> Reset
+				</button>
+			</div>
+		</div>
+		
 		<footer>
 		<div class="breadcrumbs">
             <div class="col-sm-12">
                 <div class="page-header float-left">
                     <div class="page-title">
-                     <marquee><p>© 2018 CCSL, J2EE R_37. All rights reserved. Developed By Abu Safayat Arefin</p></marquee>
+                     <p>© 2018 CCSL, J2EE R_37. All rights reserved. Developed By Abu Safayat Arefin</p>
                     </div>
                 </div>
             </div>
@@ -302,7 +336,7 @@
         </div>
 		</footer>
 		
-    </div><!-- /#right-panel -->
+    </div>
 
     <!-- Right Panel -->
 

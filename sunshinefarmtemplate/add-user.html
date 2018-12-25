@@ -72,9 +72,9 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Designation</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-th"></i><a href="add-degignation.html">Add Designation</a></li>
-                            <li><i class="menu-icon fa fa-th"></i><a href="edit-degignation.html">Edit Designation</a></li>
-							<li><i class="menu-icon fa fa-th"></i><a href="degignation-list.html">Designation List</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="add-designation.html">Add Designation</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="edit-designation.html">Edit Designation</a></li>
+							<li><i class="menu-icon fa fa-th"></i><a href="designation-list.html">Designation List</a></li>
                         </ul>
                     </li>
 
@@ -229,17 +229,17 @@
                     </div>
                 </div>
 				<div class="col-sm-7">
-				<div class="col-sm-3">
-					<h5><a href="#">Sample</a></h>
+					<div class="col-sm-3">
+						<h5><a href="index.html">Home</a></h5>
 					</div>
 					<div class="col-sm-3">
-					<h5><a href="#">Sample</a></h>
+						<h5><a href="#">Sample</a></h5>
 					</div>
 					<div class="col-sm-3">
-					<h5><a href="#">Sample</a></h>
+						<h5><a href="#">Sample</a></h5>
 					</div>
 					<div class="col-sm-3">
-					<h5><a href="#">Sample</a></h>
+						<h5><a href="#">Sample</a></h5>
 					</div>
 				</div>
                 <div class="col-sm-2">
@@ -268,33 +268,79 @@
         <!-- Header-->
 
         <div class="breadcrumbs">
-            <div class="col-sm-4">
+            <div class="col-sm-12">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>Dashboard</h1>
+                        <h1>User</h1>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <ol class="breadcrumb text-right">
-                            <li class="active">Dashboard</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
         <!--Form goes here -->
 		
+		<div class="card">
+			<div class="card-header">
+				Add <strong>User</strong>
+			</div>
+			<div class="card-body card-block">
+				<form action="" method="post" class="form-horizontal">
+					<div class="row form-group">
+						<div class="col col-md-3"><label class=" form-control-label">ID</label></div>
+						<div class="col-12 col-md-9"><input type="text" name="id" placeholder="Enter User ID" class="form-control"></div>
+					</div>
+					<div class="row form-group">
+						<div class="col col-md-3"><label class=" form-control-label">User Name</label></div>
+						<div class="col-12 col-md-9"><input type="text" name="userName" placeholder="Enter User Name" class="form-control"></div>
+					</div>
+					<div class="row form-group">
+						<div class="col col-md-3"><label class=" form-control-label">Password</label></div>
+						<div class="col-12 col-md-9"><input type="password" name="password" placeholder="Enter Password" class="form-control"></div>
+					</div>
+					<div class="row form-group">
+						<div class="col col-md-3"><label class=" form-control-label">Email Address</label></div>
+						<div class="col-12 col-md-9"><input type="email" name="Email" placeholder="Enter Email" class="form-control"></div>
+					</div>
+					<div class="row form-group">
+						<div class="col col-md-3"><label class=" form-control-label">Mobile Number</label></div>
+						<div class="col-12 col-md-9"><input type="text" name="mobile" placeholder="Enter Mobile Number" class="form-control"></div>
+					</div>
+					<div class="row form-group">
+						<div class="col col-md-3"><label class=" form-control-label">First Name</label></div>
+						<div class="col-12 col-md-9"><input type="text" name="firstName" placeholder="Enter First Name" class="form-control"></div>
+					</div>
+					<div class="row form-group">
+						<div class="col col-md-3"><label class=" form-control-label">Last Name</label></div>
+						<div class="col-12 col-md-9"><input type="text" name="lastName" placeholder="Enter Last Name" class="form-control"></div>
+					</div>
+					<div class="row form-group">
+						<div class="col col-md-3"><label class=" form-control-label">Registration Date</label></div>
+						<div class="col-12 col-md-9"><input type="date" name="registrationDate" placeholder="Enter Registration Date" class="form-control"></div>
+					</div>
+					<div class="row form-group">
+						<div class="col col-md-3"><label class=" form-control-label">Role ID</label></div>
+						<div class="col-12 col-md-9"><input type="text" name="role" placeholder="Enter Role ID" class="form-control"></div>
+					</div>
+					
+				</form>
+			</div>
+			<div class="card-footer">
+				<button type="submit" class="btn btn-primary btn-sm">
+					<i class="fa fa-dot-circle-o"></i> Submit
+				</button>
+				<button type="reset" class="btn btn-danger btn-sm">
+					<i class="fa fa-ban"></i> Reset
+				</button>
+			</div>
+		</div>
 		
 		<footer>
 		<div class="breadcrumbs">
             <div class="col-sm-12">
                 <div class="page-header float-left">
                     <div class="page-title">
-                     <marquee><p>© 2018 CCSL, J2EE R_37. All rights reserved. Developed By Abu Safayat Arefin</p></marquee>
+                     <p>© 2018 CCSL, J2EE R_37. All rights reserved. Developed By Abu Safayat Arefin</p>
                     </div>
                 </div>
             </div>
