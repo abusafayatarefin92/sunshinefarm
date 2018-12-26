@@ -3,8 +3,9 @@
       xmlns:th="http://www.thymeleaf.org"
     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-    <title layout:title-pattern="$CONTENT_TITLE_$LAYOUT_TITLE">Sun-Shine Farm</title>
+    <title layout:title-pattern="$CONTENT_TITLE_$LAYOUT_TITLE">Sun-Shine Farm Inc.</title>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,9 +20,9 @@
     <link rel="stylesheet" href="/vendors/jqvmap/dist/jqvmap.min.css" th:href="@{/vendors/jqvmap/dist/jqvmap.min.css}">
 
 
-    <link rel="stylesheet" href="assets/css/style.css" th:href="@{/assets/css/style.css}">
+    <link rel="stylesheet" href="/assets/css/style.css" th:href="@{/assets/css/style.css}">
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800}" rel='stylesheet' type='text/css'>
 
     <title>Sunshine Farm Inc.</title>
 </head>
