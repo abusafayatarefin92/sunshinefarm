@@ -1,7 +1,6 @@
 package com.arefin.sunshinefarm.entity;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Table(name = "crops")
