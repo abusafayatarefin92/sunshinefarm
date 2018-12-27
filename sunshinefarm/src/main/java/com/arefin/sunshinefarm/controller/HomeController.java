@@ -12,10 +12,15 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping(value = "/add-test.jsf")
-    public String displayTest(){
+    @GetMapping(value = "/add-role.jsf")
+    public String displayAddRole(){
 
-        return "test";
+        return "add-role";
     }
 
+    @GetMapping(value = "/add-expenses.jsf")
+    public String displayAddExpenses(){
+
+        return "add-expenses";
+    }
 }
