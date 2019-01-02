@@ -17,7 +17,7 @@ public class Expenses {
     private Double amount;
 
     @Column(name = "date")
-    private Date date;
+    private String date;
 
     @Column(name = "person_name")
     private String personName;
@@ -46,11 +46,11 @@ public class Expenses {
         this.amount = amount;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
