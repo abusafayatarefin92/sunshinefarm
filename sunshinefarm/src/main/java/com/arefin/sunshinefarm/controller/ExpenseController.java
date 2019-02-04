@@ -11,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 
@@ -18,21 +19,33 @@ import javax.validation.Valid;
 @RequestMapping(value = "/expenses/")
 public class ExpenseController {
     @Autowired
-    ExpenseRepo expenseRepo;
+    private ExpenseRepo expenseRepo;
 
     @GetMapping(value = "create.jsf")
-    public String displayExpenses(Model model){
-        model.addAttribute("obj", new Expenses());
-        return "expenses/create";
+    public ModelAndView display() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("obj", new Expenses());
+        modelAndView.setViewName("expenses/create");
+        return modelAndView;
     }
 
     @PostMapping(value = "create.jsf")
-    public String saveExpenses(@Valid Expenses obj, BindingResult result, Model model){
-        if(obj != null) {
+    public ModelAndView save(@Valid Expenses obj, BindingResult result) {
+        ModelAndView modelAndView = new ModelAndView();
+        if (obj != null) {
             expenseRepo.save(obj);
-            model.addAttribute("successMsg", "Success");
-            model.addAttribute("obj", new Expenses());
+            modelAndView.addObject("obj", new Expenses());
+            modelAndView.setViewName("expenses/create");
         }
-        return "expenses/create";
+        modelAndView.setViewName("expenses/create");
+        return modelAndView;
+    }
+
+    @GetMapping(value = "list.jsf")
+    public ModelAndView getList() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("list", expenseRepo.findAll());
+        modelAndView.setViewName("expenses/list");
+        return modelAndView;
     }
 }

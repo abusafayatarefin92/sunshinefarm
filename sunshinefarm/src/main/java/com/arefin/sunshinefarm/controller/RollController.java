@@ -33,4 +33,10 @@ public class RollController {
         }
         return "role/create";
     }
+
+    @GetMapping(value = "list.jsf")
+    public String getRoleList(Model model) {
+        model.addAttribute("list", roleRepo.findAll());
+        return "role/list";
+    }
 }

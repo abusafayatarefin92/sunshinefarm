@@ -1,6 +1,8 @@
 package com.arefin.sunshinefarm.entity;
 
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -17,10 +19,15 @@ public class Sales {
     @Column(name = "product_code")
     private String productCode;
 
+    @Column(name = "quantity")
+    private int quantity;
+
     @Column(name = "per_unit_sales_price")
     private Double perUnitSalesPrice;
 
     @Column(name = "sales_date")
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern="MM-dd-yyyy")
     private Date salesDate;
 
     @ManyToOne
@@ -73,5 +80,13 @@ public class Sales {
 
     public void setPerUnitSalesPrice(Double perUnitSalesPrice) {
         this.perUnitSalesPrice = perUnitSalesPrice;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

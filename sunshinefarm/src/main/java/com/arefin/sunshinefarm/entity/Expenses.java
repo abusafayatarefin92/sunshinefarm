@@ -1,5 +1,7 @@
 package com.arefin.sunshinefarm.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -17,7 +19,9 @@ public class Expenses {
     private Double amount;
 
     @Column(name = "date")
-    private String date;
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern="MM-dd-yyyy")
+    private Date date;
 
     @Column(name = "person_name")
     private String personName;
@@ -46,11 +50,11 @@ public class Expenses {
         this.amount = amount;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 

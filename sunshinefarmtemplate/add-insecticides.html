@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
 
+    <link rel="stylesheet" href="vendors/chosen/chosen.min.css">
+
 
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -56,7 +58,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Role</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-puzzle-piece"></i><a href="add-role.html">Add Role</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="edit-role.html">Edit Role</a></li>
+                            
                             <li><i class="fa fa-bars"></i><a href="role-list.html">Role list</a></li>
                             
                         </ul>
@@ -65,7 +67,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>User</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-rub"></i><a href="add-user.html">Add User</a></li>
-                            <li><i class="fa fa-stack-exchange"></i><a href="edit-user.html">Edit User</a></li>
+                            
 							<li><i class="fa fa-try"></i><a href="user-list.html">User List</a></li>
                         </ul>
                     </li>
@@ -73,7 +75,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Designation</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-th"></i><a href="add-designation.html">Add Designation</a></li>
-                            <li><i class="menu-icon fa fa-th"></i><a href="edit-designation.html">Edit Designation</a></li>
+                            
 							<li><i class="menu-icon fa fa-th"></i><a href="designation-list.html">Designation List</a></li>
                         </ul>
                     </li>
@@ -84,7 +86,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Employees</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-fort-awesome"></i><a href="add-employees.html">Add Employees</a></li>
-                            <li><i class="menu-icon ti-themify-logo"></i><a href="edit-employees.html">Edit Employees</a></li>
+                            
 							<li><i class="menu-icon ti-themify-logo"></i><a href="employees-list.html">Employees List</a></li>
                         </ul>
                     </li>
@@ -92,7 +94,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cutlery"></i>Crops</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-fort-awesome"></i><a href="add-crops.html">Add Crops</a></li>
-                            <li><i class="menu-icon ti-themify-logo"></i><a href="edit-crops.html">Edit Crops</a></li>
+                            
 							<li><i class="menu-icon ti-themify-logo"></i><a href="crops-list.html">Crops List</a></li>
                         </ul>
                     </li>
@@ -101,7 +103,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Sales</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-line-chart"></i><a href="add-sales.html">Add Sales</a></li>
-                            <li><i class="menu-icon fa fa-area-chart"></i><a href="edit-sales.html">Edit Sales</a></li>
+                            
                             <li><i class="menu-icon fa fa-pie-chart"></i><a href="sales-list.html">Sales List</a></li>
                         </ul>
                     </li>
@@ -110,7 +112,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-area-chart"></i>Equipment</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-map-o"></i><a href="add-equipment.html">Add Equipment</a></li>
-                            <li><i class="menu-icon fa fa-street-view"></i><a href="edit-equipment.html">Edit Equipment</a></li>
+                            
 							<li><i class="menu-icon fa fa-street-view"></i><a href="equipment-list.html">Equipment List</a></li>
                         </ul>
                     </li>
@@ -119,7 +121,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Insecticides</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-sign-in"></i><a href="add-insecticides.html">Add Insecticides</a></li>
-                            <li><i class="menu-icon fa fa-sign-in"></i><a href="edit-insecticides.html">Edit Insecticides</a></li>
+                            
                             <li><i class="menu-icon fa fa-paper-plane"></i><a href="insecticides-list.html">Insecticides List</a></li>
                         </ul>
                     </li>
@@ -127,8 +129,17 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-pagelines"></i>Pesticides</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-puzzle-piece"></i><a href="add-pesticides.html">Add Pesticides</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="edit-pesticides.html">Edit Pesticides</a></li>
+                            
                             <li><i class="fa fa-bars"></i><a href="pesticides-list.html">Pesticides List</a></li>
+                            
+                        </ul>
+                    </li>
+					<li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-pagelines"></i>Expenses</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-puzzle-piece"></i><a href="add-expenses.html">Add Expenses</a></li>
+                            
+                            <li><i class="fa fa-bars"></i><a href="expenses-list.html">Expenses List</a></li>
                             
                         </ul>
                     </li>
@@ -285,10 +296,7 @@
 			</div>
 			<div class="card-body card-block">
 				<form action="" method="post" class="form-horizontal">
-					<div class="row form-group">
-						<div class="col col-md-3"><label class=" form-control-label">ID</label></div>
-						<div class="col-12 col-md-9"><input type="text" name="id" placeholder="Enter Insecticides ID" class="form-control"></div>
-					</div>
+					
 					<div class="row form-group">
 						<div class="col col-md-3"><label class=" form-control-label">Name</label></div>
 						<div class="col-12 col-md-9"><input type="text" name="name" placeholder="Enter Insecticides Name" class="form-control"></div>
@@ -299,15 +307,30 @@
 					</div>
 					<div class="row form-group">
 						<div class="col col-md-3"><label class=" form-control-label">Quantity</label></div>
-						<div class="col-12 col-md-9"><input type="text" name="quantity" placeholder="Enter Product Quantity" class="form-control"></div>
+						<div class="col-12 col-md-9"><input type="number" name="quantity" placeholder="Enter Product Quantity" class="form-control"></div>
 					</div>
 					<div class="row form-group">
 						<div class="col col-md-3"><label class=" form-control-label">Purchase Price</label></div>
 						<div class="col-12 col-md-9"><input type="text" name="purchasePrice" placeholder="Enter Purchase Price" class="form-control"></div>
 					</div>
 					<div class="row form-group">
-						<div class="col col-md-3"><label class=" form-control-label">Crops</label></div>
-						<div class="col-12 col-md-9"><input type="text" name="crops" placeholder="Enter Crops ID" class="form-control"></div>
+						<div class="col col-md-3"><label class=" form-control-label">Person Name</label></div>
+						<div class="col-12 col-md-9"><input type="text" name="personName" placeholder="Enter Responsible Person Name" class="form-control"></div>
+					</div>
+					<div class="row form-group">
+						<div class="col col-md-3"><label for="multiple-select" class=" form-control-label">Crops Name</label></div>
+						<div class="col col-md-9">
+
+							<select data-placeholder="Choose a country..." multiple class="standardSelect">
+								<option value=""></option>
+								<option value="Broccoli">Broccoli</option>
+								<option value="Cabbage">Cabbage</option>
+								<option value="Carrots">Carrots</option>
+								<option value="Cauliflower">Cauliflower</option>
+								
+							</select>
+
+						</div>
 					</div>
 				</form>
 			</div>
@@ -350,7 +373,9 @@
     <script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
     <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
     <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script>
+	<script src="vendors/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="vendors/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+	<script>
         (function($) {
             "use strict";
 
@@ -368,6 +393,22 @@
             });
         })(jQuery);
     </script>
+
+	
+	
+	
+	<script src="vendors/jquery/dist/jquery.min.js"></script>
+	<script src="vendors/chosen/chosen.jquery.min.js"></script>
+
+	<script>
+		jQuery(document).ready(function() {
+			jQuery(".standardSelect").chosen({
+				disable_search_threshold: 10,
+				no_results_text: "Oops, nothing found!",
+				width: "100%"
+			});
+		});
+	</script>
 
 </body>
 

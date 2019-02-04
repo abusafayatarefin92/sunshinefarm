@@ -1,5 +1,7 @@
 package com.arefin.sunshinefarm.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -10,10 +12,10 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "user_name", unique = true)
+    @Column(name = "user_name")
     private String userName;
 
-    @Column(name = "password", unique = true)
+    @Column(name = "password")
     private String password;
 
     @Column(name = "email", unique = true)
@@ -22,13 +24,15 @@ public class User {
     @Column(name = "mobile", unique = true)
     private String mobile;
 
-    @Column(name = "first_name", unique = true)
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "last_name", unique = true)
+    @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "registration_date", unique = true)
+    @Column(name = "registration_date")
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern="MM-dd-yyyy")
     private Date registrationDate;
 
     @ManyToOne

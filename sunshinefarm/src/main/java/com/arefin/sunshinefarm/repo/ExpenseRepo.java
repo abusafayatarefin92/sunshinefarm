@@ -8,8 +8,5 @@ import java.util.Date;
 
 @Repository
 public interface ExpenseRepo extends JpaRepository<Expenses, Long> {
-    Expenses findByExpenseName(String expenseName);
-    Expenses findByAmount(Double amount);
-    Expenses findByDate(Date date);
-    Expenses findByPersonName(String personName);
+
 }

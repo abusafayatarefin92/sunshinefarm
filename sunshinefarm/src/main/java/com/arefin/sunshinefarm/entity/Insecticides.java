@@ -23,6 +23,9 @@ public class Insecticides {
     @Column(name = "purchase_price")
     private Double purchasePrice;
 
+    @Column(name = "person_name")
+    private String personName;
+
     @ManyToMany
     @JoinTable(
             name = "insecticides_crops",
@@ -76,5 +79,13 @@ public class Insecticides {
 
     public void setPurchasePrice(Double purchasePrice) {
         this.purchasePrice = purchasePrice;
+    }
+
+    public String getPersonName() {
+        return personName;
+    }
+
+    public void setPersonName(String personName) {
+        this.personName = personName;
     }
 }

@@ -1,5 +1,7 @@
 package com.arefin.sunshinefarm.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -20,6 +22,8 @@ public class Employees {
     private String mobile;
 
     @Column(name = "starting_date")
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern="MM-dd-yyyy")
     private Date startingDate;
 
     @Column(name = "monthly_salary")

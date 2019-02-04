@@ -33,4 +33,10 @@ public class DesignationController {
         }
         return "designation/create";
     }
+
+    @GetMapping(value = "list.jsf")
+    public String getRoleList(Model model) {
+        model.addAttribute("list", designationRepo.findAll());
+        return "designation/list";
+    }
 }

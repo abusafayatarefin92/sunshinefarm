@@ -1,5 +1,7 @@
 package com.arefin.sunshinefarm.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -26,6 +28,8 @@ public class CropsSummary {
     private int availableQuantity;
 
     @Column(name = "last_update")
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern="MM-dd-yyyy")
     private Date lastUpdate;
 
     @OneToOne
