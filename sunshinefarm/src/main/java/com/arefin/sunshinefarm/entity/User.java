@@ -3,7 +3,10 @@ package com.arefin.sunshinefarm.entity;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
+import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "user")
@@ -13,31 +16,60 @@ public class User {
     private Long id;
 
     @Column(name = "user_name")
+    @NotBlank(message = "Enter your username")
     private String userName;
 
     @Column(name = "password")
+    @NotBlank(message = "Enter your password")
     private String password;
 
     @Column(name = "email", unique = true)
+    @NotBlank(message = "Enter your email")
     private String email;
 
     @Column(name = "mobile", unique = true)
+    @NotBlank(message = "Enter your mobile")
     private String mobile;
 
-    @Column(name = "first_name")
-    private String firstName;
-
-    @Column(name = "last_name")
-    private String lastName;
+    @Column(name = "name")
+    @NotBlank(message = "Enter your Name")
+    private String name;
 
     @Column(name = "registration_date")
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern="MM-dd-yyyy")
     private Date registrationDate;
 
-    @ManyToOne
-    @JoinColumn(name = "role_id", nullable = false)
-    private Role role;
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "user_role",
+            joinColumns = @JoinColumn(name = "u_id"),
+            inverseJoinColumns = @JoinColumn(name = "r_id")
+    )
+    private Set<Role> roles;
+
+    public User() {
+    }
+
+    public User(@NotBlank(message = "Enter your username") String userName, @NotBlank(message = "Enter your password") String password, @NotBlank(message = "Enter your email") String email, @NotBlank(message = "Enter your mobile") String mobile, @NotBlank(message = "Enter your firstName") String name, Date registrationDate, Set<Role> roles) {
+        this.userName = userName;
+        this.password = password;
+        this.email = email;
+        this.mobile = mobile;
+        this.name = name;
+        this.registrationDate = registrationDate;
+        this.roles = roles;
+    }
+
+    public User(User user){
+        this.userName = user.userName;
+        this.password = user.password;
+        this.email = user.email;
+        this.mobile = user.mobile;
+        this.name = user.name;
+        this.registrationDate = user.registrationDate;
+        this.roles = user.roles;
+    }
 
     public Long getId() {
         return id;
@@ -71,20 +103,12 @@ public class User {
         this.mobile = mobile;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Date getRegistrationDate() {
@@ -95,14 +119,13 @@ public class User {
         this.registrationDate = registrationDate;
     }
 
-    public Role getRole() {
-        return role;
+    public Set<Role> getRoles() {
+        return roles;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
-
 
     public String getPassword() {
         return password;
@@ -112,4 +135,37 @@ public class User {
         this.password = password;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(id, user.id) &&
+                Objects.equals(userName, user.userName) &&
+                Objects.equals(password, user.password) &&
+                Objects.equals(email, user.email) &&
+                Objects.equals(mobile, user.mobile) &&
+                Objects.equals(name, user.name) &&
+                Objects.equals(registrationDate, user.registrationDate) &&
+                Objects.equals(roles, user.roles);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, userName, password, email, mobile, name, registrationDate, roles);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", firstName='" + name + '\'' +
+                ", registrationDate=" + registrationDate +
+                ", role=" + roles +
+                '}';
+    }
 }
