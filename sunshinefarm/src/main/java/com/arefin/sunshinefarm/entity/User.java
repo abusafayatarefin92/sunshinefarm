@@ -37,7 +37,7 @@ public class User {
 
     @Column(name = "registration_date")
     @Temporal(TemporalType.DATE)
-    @DateTimeFormat(pattern="MM-dd-yyyy")
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date registrationDate;
 
     @ManyToMany(fetch = FetchType.EAGER)
