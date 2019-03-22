@@ -1,6 +1,8 @@
 package com.arefin.sunshinefarm.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.Objects;
 
 @Entity
@@ -10,10 +12,20 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
+    @NotBlank(message = "Enter Role Name")
+    @Size(min = 2,max = 20,message = "Rolename must be between 2 and 20 Characters")
     private String roleName;
 
     public Role() {
+    }
+
+    public Role(Long id){
+        this.id = id;
+    }
+
+    public Role(String roleName) {
+        this.roleName = roleName;
     }
 
     public Long getId() {
